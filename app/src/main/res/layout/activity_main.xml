@@ -5,15 +5,53 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkBrown"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/coffee_shop"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:fontFamily="@font/rainbow"
+                android:layout_marginTop="48dp"
+                />
+
+            <EditText
+                android:id="@+id/edtSearchAnythingActMain"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:background="@drawable/shape_brown_bg"
+                android:hint="@string/search_anything"
+                android:layout_marginHorizontal="16dp"
+                android:textColorHint="@color/orange"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/search_icon"
+                android:drawablePadding="16dp"
+
+                />
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

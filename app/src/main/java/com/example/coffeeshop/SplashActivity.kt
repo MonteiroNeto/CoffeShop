@@ -1,5 +1,6 @@
 package com.example.coffeeshop
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,5 +17,13 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        binding.btnStartActSplash.setOnClickListener {
+            startActivity(
+                Intent(
+                    this, MainActivity::class.java
+                )
+            )
+        }
     }
 }
