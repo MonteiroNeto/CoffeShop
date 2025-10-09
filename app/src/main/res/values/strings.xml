@@ -6,4 +6,5 @@
     <string name="get_started">Get Started</string>
     <string name="coffee_shop">Coffee <font color="#F1953e">S</font>hop</string>
     <string name="search_anything">Search Anything</string>
+    <string name="category">Category</string>
 </resources>
