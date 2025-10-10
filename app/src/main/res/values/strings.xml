@@ -7,4 +7,7 @@
     <string name="coffee_shop">Coffee <font color="#F1953e">S</font>hop</string>
     <string name="search_anything">Search Anything</string>
     <string name="category">Category</string>
+    <string name="see_all">See all</string>
+    <string name="popular_coffees">Popular Coffees</string>
+    <string name="add">add</string>
 </resources>

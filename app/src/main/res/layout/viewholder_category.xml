@@ -2,8 +2,8 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tvTitleViewHolderCategory"
     android:layout_marginHorizontal="8dp"
-    android:background="@drawable/shape_brown_bg"
-    android:backgroundTint="@color/darkBrown"
+    android:background="@drawable/shape_dark_brown_bg"
+
     android:layout_width="wrap_content"
     android:layout_height="45dp"
     android:text="title"

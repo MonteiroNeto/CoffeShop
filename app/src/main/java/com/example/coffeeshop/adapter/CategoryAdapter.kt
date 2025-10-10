@@ -1,5 +1,6 @@
 package com.example.coffeeshop.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -25,7 +26,7 @@ class CategoryAdapter(val items: MutableList<CategoryModel>) :
         return MyViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: CategoryAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CategoryAdapter.MyViewHolder, @SuppressLint("RecyclerView") position: Int) {
         val item = items[position]
         holder.binding.tvTitleViewHolderCategory.text = item.title
 
@@ -37,9 +38,9 @@ class CategoryAdapter(val items: MutableList<CategoryModel>) :
         }
 
         if (selectedPosition == position) {
-            holder.binding.tvTitleViewHolderCategory.setBackgroundColor(context.resources.getColor(R.color.brown))
+            holder.binding.tvTitleViewHolderCategory.setBackgroundResource(R.drawable.shape_brown_bg)
         }else{
-            holder.binding.tvTitleViewHolderCategory.setBackgroundColor(context.resources.getColor(R.color.darkBrown))
+            holder.binding.tvTitleViewHolderCategory.setBackgroundResource(R.drawable.shape_dark_brown_bg)
         }
     }
 

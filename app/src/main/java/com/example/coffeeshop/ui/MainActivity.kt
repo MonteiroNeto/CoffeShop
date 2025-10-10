@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.coffeeshop.adapter.CategoryAdapter
+import com.example.coffeeshop.adapter.PopularAdapter
 import com.example.coffeeshop.databinding.ActivityMainBinding
 import com.example.coffeeshop.view_model.MainViewModel
 
@@ -21,6 +22,20 @@ class MainActivity : AppCompatActivity() {
 
 
         initCategoryAdapter()
+
+        initPopularAdapter()
+    }
+
+    private fun initPopularAdapter() {
+        binding.progressbarPopularActMain.visibility = View.VISIBLE
+        mainViewModel.loadPopular().observeForever {
+            binding.rvPopularActMain.layoutManager =
+                LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            binding.progressbarPopularActMain.visibility = View.GONE
+            binding.rvPopularActMain.adapter = PopularAdapter(it)
+        }
+
+        mainViewModel.loadCategory()
     }
 
     private fun initCategoryAdapter() {
