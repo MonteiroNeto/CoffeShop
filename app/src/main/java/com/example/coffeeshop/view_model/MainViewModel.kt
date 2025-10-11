@@ -15,4 +15,8 @@ class MainViewModel {
     fun loadPopular(): LiveData<MutableList<ItemModel>>{
         return repository.loadPopular()
     }
+
+    fun loadSpecial(): LiveData<MutableList<ItemModel>>{
+        return repository.loadSpecial()
+    }
 }

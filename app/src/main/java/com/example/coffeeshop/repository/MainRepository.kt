@@ -56,4 +56,26 @@ class MainRepository {
 
         return  listData
     }
+
+    fun loadSpecial(): LiveData<MutableList<ItemModel>> {
+        val listData = MutableLiveData<MutableList<ItemModel>>()
+        val ref = firebaseDatabase.getReference(Constant().FIREBASE_REF_SPECIAL)
+
+        ref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val list = mutableListOf<ItemModel>()
+                for (child in snapshot.children) {
+                    val item = child.getValue(ItemModel::class.java)
+                    item?.let { list.add(it) }
+                }
+                listData.value = list
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+
+        return  listData
+    }
 }

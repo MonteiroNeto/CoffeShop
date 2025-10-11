@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.coffeeshop.adapter.CategoryAdapter
 import com.example.coffeeshop.adapter.PopularAdapter
+import com.example.coffeeshop.adapter.SpecialAdapter
 import com.example.coffeeshop.databinding.ActivityMainBinding
 import com.example.coffeeshop.view_model.MainViewModel
 
@@ -24,6 +25,20 @@ class MainActivity : AppCompatActivity() {
         initCategoryAdapter()
 
         initPopularAdapter()
+
+        initSpecialAdapter()
+    }
+
+    private fun initSpecialAdapter() {
+        binding.progressbarSpecialActMain.visibility = View.VISIBLE
+        mainViewModel.loadSpecial().observeForever {
+            binding.rvSpecialActMain.layoutManager =
+                LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            binding.progressbarSpecialActMain.visibility = View.GONE
+            binding.rvSpecialActMain.adapter = SpecialAdapter(it)
+        }
+
+        mainViewModel.loadSpecial()
     }
 
     private fun initPopularAdapter() {
