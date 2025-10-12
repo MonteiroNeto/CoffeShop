@@ -11,4 +11,9 @@
     <string name="popular_coffees">Popular Coffees</string>
     <string name="add">add</string>
     <string name="special_coffee">Special Coffee</string>
+    <string name="explore">Explore</string>
+    <string name="cart">Cart</string>
+    <string name="favorite">Favorite</string>
+    <string name="my_order">My Order</string>
+    <string name="profile">Profile</string>
 </resources>
