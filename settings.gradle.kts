@@ -9,6 +9,8 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        //My import to set library github to show itemDetail
+        maven{url=uri("https://www.jitpack.io")}
     }
 }
 dependencyResolutionManagement {
@@ -16,6 +18,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        //My import to set library github to show itemDetail
+        maven{url=uri("https://www.jitpack.io")}
     }
 }
 

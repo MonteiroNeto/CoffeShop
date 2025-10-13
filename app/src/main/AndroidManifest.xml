@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoffeeShop">
         <activity
+            android:name=".ui.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ItemsListActivity"
             android:exported="false" />
         <activity

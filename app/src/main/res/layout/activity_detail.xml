@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBrown"
+    tools:context=".ui.DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llBtnBackActDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/back"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="510dp"
+                android:layout_marginTop="16dp">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shapeIvItemDetailActDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="430dp"
+                    android:layout_margin="16dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/CircleImageView"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/blurView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/shapeIvItemDetailActDetail"
+                    app:layout_constraintEnd_toEndOf="@+id/shapeIvItemDetailActDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/shapeIvItemDetailActDetail"
+                    app:layout_constraintBottom_toBottomOf="@+id/shapeIvItemDetailActDetail"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp">
+
+                        <TextView
+                            android:id="@+id/tvTitleActDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Title"
+                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvExtraActDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Extra"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+
+                            app:layout_constraintBottom_toTopOf="@id/ivStarActDetail"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginBottom="16dp"
+                            />
+
+                        <ImageView
+                            android:id="@+id/ivFavoriteActDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/btn_3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginTop="16dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivStarActDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/star"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvStarNumberActDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="8dp"
+                            app:layout_constraintStart_toEndOf="@+id/ivStarActDetail"
+                            app:layout_constraintTop_toTopOf="@+id/ivStarActDetail"
+                            app:layout_constraintBottom_toBottomOf="@id/ivStarActDetail"
+                            android:textStyle="bold"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </eightbitlab.com.blurview.BlurView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/ivStarActDetail"
+                app:layout_constraintTop_toTopOf="@+id/ivStarActDetail"
+                app:layout_constraintBottom_toBottomOf="@id/ivStarActDetail"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/tvDescriptionsActDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description *******"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toEndOf="@+id/ivStarActDetail"
+                app:layout_constraintTop_toTopOf="@+id/ivStarActDetail"
+                app:layout_constraintBottom_toBottomOf="@id/ivStarActDetail"
+                android:textStyle="italic"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coffe_size"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/ivStarActDetail"
+                app:layout_constraintTop_toTopOf="@+id/ivStarActDetail"
+                app:layout_constraintBottom_toBottomOf="@id/ivStarActDetail"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
