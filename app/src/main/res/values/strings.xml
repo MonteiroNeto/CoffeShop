@@ -20,4 +20,8 @@
     <string name="list">List</string>
     <string name="description">Description</string>
     <string name="coffe_size">Coffe Size</string>
+    <string name="price">Price</string>
+    <string name="star_number">Star Number</string>
+    <string name="extra">Extra</string>
+    <string name="add_cart">Add Cart</string>
 </resources>
