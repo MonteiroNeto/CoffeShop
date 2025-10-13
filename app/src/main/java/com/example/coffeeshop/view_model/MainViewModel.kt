@@ -8,15 +8,19 @@ import com.example.coffeeshop.repository.MainRepository
 class MainViewModel {
     private val repository = MainRepository()
 
-    fun loadCategory(): LiveData<MutableList<CategoryModel>>{
+    fun loadCategory(): LiveData<MutableList<CategoryModel>> {
         return repository.loadCategory()
     }
 
-    fun loadPopular(): LiveData<MutableList<ItemModel>>{
+    fun loadPopular(): LiveData<MutableList<ItemModel>> {
         return repository.loadPopular()
     }
 
-    fun loadSpecial(): LiveData<MutableList<ItemModel>>{
+    fun loadSpecial(): LiveData<MutableList<ItemModel>> {
         return repository.loadSpecial()
+    }
+
+    fun loadItemsCategory(categoryId: String): LiveData<MutableList<ItemModel>> {
+        return repository.loadCategoryItems(categoryId)
     }
 }

@@ -16,4 +16,6 @@
     <string name="favorite">Favorite</string>
     <string name="my_order">My Order</string>
     <string name="profile">Profile</string>
+    <string name="back">BACK</string>
+    <string name="list">List</string>
 </resources>
