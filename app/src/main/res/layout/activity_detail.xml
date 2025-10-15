@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkBrown"
-    tools:context=".ui.DetailActivity">
+    tools:context=".ui.DetailActivity"
+
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,6 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -51,8 +54,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="510dp"
-                android:layout_marginTop="16dp">
+                android:layout_height="550dp"
+                android:layout_marginTop="16dp"
+                >
 
 
                 <com.google.android.material.imageview.ShapeableImageView
@@ -68,11 +72,14 @@
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                 <eightbitlab.com.blurview.BlurView
-                    android:id="@+id/blurView"
+                    android:id="@+id/blurViewActDetail"
                     android:layout_width="0dp"
+                    android:background="@drawable/shape_blur_bg"
+                    app:blurOverlayColor="#10ffffff"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="16dp"
                     app:layout_constraintBottom_toBottomOf="@+id/shapeIvItemDetailActDetail"
                     app:layout_constraintEnd_toEndOf="@+id/shapeIvItemDetailActDetail"
                     app:layout_constraintStart_toStartOf="@+id/shapeIvItemDetailActDetail"
@@ -100,9 +107,9 @@
                             android:layout_marginBottom="16dp"
                             android:text="@string/extra"
                             android:textColor="@color/white"
-
                             android:textSize="12sp"
-                            app:layout_constraintBottom_toTopOf="@id/ivStarActDetail"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleActDetail"
+                            android:layout_marginTop="16dp"
                             app:layout_constraintStart_toStartOf="parent" />
 
                         <ImageView
@@ -125,7 +132,7 @@
                             app:layout_constraintStart_toStartOf="parent" />
 
                         <TextView
-                            android:id="@+id/tvStarNumberActDetail"
+                            android:id="@+id/tvRatingNumberActDetail"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
@@ -244,7 +251,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginHorizontal="16dp">
+                android:layout_marginHorizontal="16dp"
+                android:paddingBottom="60dp">
 
                 <TextView
                     android:id="@+id/tvPriceTitleActDetail"
