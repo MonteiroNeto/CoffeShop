@@ -25,4 +25,8 @@
     <string name="extra">Extra</string>
     <string name="add_cart">Add Cart</string>
     <string name="coffee_size">Coffee Size</string>
+    <string name="my_cart">My Cart</string>
+    <string name="sub_total">Sub Total</string>
+    <string name="delivery">Delivery</string>
+    <string name="total_tax">Total Tax</string>
 </resources>
