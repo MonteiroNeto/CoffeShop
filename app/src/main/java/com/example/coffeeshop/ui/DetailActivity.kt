@@ -1,12 +1,18 @@
 package com.example.coffeeshop.ui
 
 import android.os.Bundle
+import android.util.Log
+import android.view.RoundedCorner
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewOutlineProvider
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
+import com.example.coffeeshop.adapter.CoffeeSizeAdapter
 import com.example.coffeeshop.databinding.ActivityDetailBinding
 import com.example.coffeeshop.helper.ManagmentCart
 import com.example.coffeeshop.model.ItemModel
@@ -28,6 +34,29 @@ class DetailActivity : AppCompatActivity() {
 
         bundle()
         setBlurEffect()
+        initCoffeeSizeAdapter()
+    }
+
+    private fun initCoffeeSizeAdapter() {
+        val listCoffeeSize = ArrayList<String>()
+        listCoffeeSize.add("1")
+        listCoffeeSize.add("2")
+        listCoffeeSize.add("3")
+        listCoffeeSize.add("4")
+
+        binding.rvCoffeeSizeListActDetail.adapter = CoffeeSizeAdapter(listCoffeeSize)
+        binding.rvCoffeeSizeListActDetail.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        val colorList = ArrayList<String>()
+        for (imgUrl in item.picUrl) {
+            colorList.add(imgUrl)
+        }
+
+        Glide.with(this)
+            .load(colorList[0])
+            .apply(RequestOptions.bitmapTransform(RoundedCorners(100)))
+            .into(binding.shapeIvItemDetailActDetail)
     }
 
     private fun setBlurEffect() {
