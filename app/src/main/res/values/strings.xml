@@ -31,4 +31,5 @@
     <string name="total_tax">Total Tax</string>
     <string name="item_cart">Item Cart</string>
     <string name="close">Close</string>
+    <string name="total">Total</string>
 </resources>

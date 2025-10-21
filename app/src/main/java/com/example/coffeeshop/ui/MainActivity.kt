@@ -22,11 +22,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        initComponents()
+
         initCategoryAdapter()
 
         initPopularAdapter()
 
         initSpecialAdapter()
+    }
+
+    private fun initComponents() {
+        //Init Bottom menu
+        BottomMenu(binding.includedBottomNavigationActMain, this).startMenu()
     }
 
     private fun initSpecialAdapter() {

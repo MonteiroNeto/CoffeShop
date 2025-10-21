@@ -183,7 +183,7 @@
                 android:id="@+id/tvTotalActCart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sub_total"
+                android:text="@string/total"
                 android:textColor="@color/darkBrown"
                 android:textSize="14sp"
                 android:textStyle="bold"
