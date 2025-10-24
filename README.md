@@ -1,6 +1,6 @@
 # CoffeShop
 
-Projeto Integrador Transdisciplinar em Engenharia de Software II - UNICID - Cruzeiro Sul Virtual
+Projeto Integrador Transdisciplinar em Engenharia de Software II - Cruzeiro Sul
 
 _Esse é um projeto que funcionará como um Coffee shop para uma pequena empresa. 
 Ele faz parte de um trabalho acadêmico e utiliza conceitos aprendidos durante o curso. 
